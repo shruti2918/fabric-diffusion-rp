@@ -4,11 +4,11 @@ from PIL import Image
 sys.path.insert(0, '/app/fabric-diffusion')
 from pipeline import FabricDiffusionPipeline
 
-print("Loading FabricDiffusion...")
+print("Loading FabricDiffusion from HuggingFace...")
 PIPE = FabricDiffusionPipeline(
     "cuda:0",
-    texture_checkpoint="/runpod-volume/fabric-diffusion-texture",
-    print_checkpoint="/runpod-volume/fabric-diffusion-print",
+    texture_checkpoint="Yuanhao-Harry-Wang/fabric-diffusion-texture",
+    print_checkpoint="Yuanhao-Harry-Wang/fabric-diffusion-print",
 )
 print("Pipeline ready.")
 
